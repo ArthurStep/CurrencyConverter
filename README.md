@@ -7,5 +7,6 @@ Web Currency Converter by API + admin changes!
 * Admin currency changing.
 * Admin login mail verification
 * Admin can set date and time for course and user can select course by date.
+* etc.
 
 Project by Arthur Stepanyan: https://github.com/ArthurStep.
