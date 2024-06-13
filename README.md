@@ -1,5 +1,5 @@
 # CurrencyConverter
-Web Currency Converter by API + admin changes!
+Web Currency Converter by API + exchange rate change by the administrator.
 
 # Features
 * API currency get.
