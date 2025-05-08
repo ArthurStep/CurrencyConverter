@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale = 1.0, user-scalable = no">
+    <meta charset="UTF-8">
+    <title>CurrencyConverter | Admin</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            flex-direction: column;
+            color: #333;
+        }
+
+        h3 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        label {
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        select,
+        input[type="text"],
+        input[type="password"],
+        input[type="submit"] {
+            padding: 10px;
+            width: 200px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            background-color: #fff;
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 16px;
+            outline: none;
+        }
+
+        input[type="submit"] {
+            cursor: pointer;
+            background-color: #333;
+            border: none;
+            color: #fff;
+            transition: background-color 0.3s ease;
+            width: auto;
+            padding: 8px 20px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #555;
+        }
+
+        select {
+            appearance: none;
+            -webkit-appearance: none;
+            padding-right: 20px;
+            background-size: 12px;
+        }
+
+        input[type="text"]::placeholder {
+            color: #999;
+        }
+    </style>
+</head>
+<body>
+<h3>Admin</h3>
+<br>
+<p th:text="${adminmessage}"></p>
+<form method="post" action="/process/admin-write">
+    <p>Enter currency for write: </p>
+    <label>
+        <input type="text" name="form-from-currency-admin" placeholder="from: ">
+    </label>
+    <br><br><br>
+    <label>
+        <input type="text" name="form-to-currency-admin" placeholder="to: ">
+    </label>
+    <br><br><br>
+    <label>
+        <input type="text" name="form-amount-currency-admin" placeholder="amount: ">
+    </label>
+    <label>
+        <input type="text" name="form-bank-currency-admin" placeholder="Bank: ">
+    </label>
+    <br><br><br>
+    <label>
+        <input type="password" name="form-write-admin-mail-code" placeholder="Mail code: ">
+    </label>
+    <br><br><br><br>
+    <input type="submit" value="Submit">
+</form>
+
+<br><br><br><br>
+<form action="/">
+    <input type="submit" value="<- Back to Main">
+</form>
+</body>
+</html>
